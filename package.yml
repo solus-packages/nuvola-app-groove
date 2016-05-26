@@ -1,0 +1,18 @@
+name       : nuvola-app-groove
+version    : 1.1
+release    : 1
+source     :
+    - https://github.com/tiliado/nuvola-app-groove/archive/1.1.tar.gz : b6db0874979f107648579c4989ff4cdb5b7bba9fdd8cf513f8bba92147881aa0
+license    : BSD-2-Clause
+component  : desktop.multimedia
+summary    : Microsoft Groove Integration for Nuvola Player 3.
+description: |
+    Integration of Microsoft Groove into your linux desktop via Nuvola Player.
+builddeps  :
+    - librsvg-devel
+rundeps    :
+    - nuvolaplayer
+build      : |
+    %make 
+install    : |
+    %make_install DEST="$installdir/usr/share/nuvolaplayer3/web_apps"
